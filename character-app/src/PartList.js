@@ -31,7 +31,8 @@ for (let i = 0; i < total.body; i++) {
       name="body"
       className="portrait"
       src={`../img/body/${i + 1}.png`}
-      // width="50px"
+      width="50px"
+      height="60px"
       alt="PNG"
     />
   );
@@ -43,9 +44,10 @@ for (let i = 0; i < total.eyes; i++) {
       key={i + 1}
       id={i + 1}
       name="eyes"
-      className="portrait zoom"
+      className="portrait"
       src={`../img/eyes/${i + 1}.png`}
-      // width="50px"
+      width="100px"
+      height="120px"
       alt="PNG"
     />
   );
@@ -58,7 +60,7 @@ for (let i = 0; i < total.hair; i++) {
       name="hair"
       className="portrait"
       src={`../img/hair/${i + 1}.png`}
-      // width="50px"
+      width="50px"
       alt="PNG"
     />
   );
@@ -71,7 +73,8 @@ for (let i = 0; i < total.mouth; i++) {
       name="mouth"
       className="portrait"
       src={`../img/mouths/${i + 1}.png`}
-      // width="50px"
+      width="100px"
+      height="120px"
       alt="PNG"
     />
   );
@@ -84,7 +87,8 @@ for (let i = 0; i < total.eyebrows; i++) {
       name="eyebrows"
       className="portrait"
       src={`../img/eyebrows/${i + 1}.png`}
-      // width="50px"
+      width="100px"
+      height="120px"
       alt="PNG"
     />
   );
@@ -97,7 +101,7 @@ for (let i = 0; i < total.hat; i++) {
       name="hat"
       className="portrait"
       src={`../img/accessories/hats/${i + 1}.png`}
-      // width="50px"
+      width="50px"
       alt="PNG"
     />
   );
@@ -110,7 +114,7 @@ for (let i = 0; i < total.glasses; i++) {
       name="glasses"
       className="portrait"
       src={`../img/accessories/glasses/${i + 1}.png`}
-      // width="50px"
+      width="50px"
       alt="PNG"
     />
   );
@@ -123,7 +127,7 @@ for (let i = 0; i < total.clothing1; i++) {
       name="clothing1"
       className="portrait"
       src={`../img/clothes/layer_1/${i + 1}.png`}
-      // width="50px"
+      width="50px"
       alt="PNG"
     />
   );
@@ -136,7 +140,7 @@ for (let i = 0; i < total.clothing2; i++) {
       name="clothing2"
       className="portrait"
       src={`../img/clothes/layer_2/${i + 1}.png`}
-      // width="50px"
+      width="50px"
       alt="PNG"
     />
   );
@@ -149,7 +153,7 @@ for (let i = 0; i < total.clothing3; i++) {
       name="clothing3"
       className="portrait"
       src={`../img/clothes/layer_3/${i + 1}.png`}
-      // width="50px"
+      width="50px"
       alt="PNG"
     />
   );
