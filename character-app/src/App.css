@@ -1,0 +1,151 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+main {
+  position: relative;
+  display: flex;
+  /* justify-content: space-around; */
+  width: 100%;
+}
+.container {
+  font-family: "DM Sans", sans-serif;
+
+  padding: 2rem 3rem 3rem;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgba(226, 230, 159, 0.4);
+  color: #fff;
+  box-shadow: 4px 2px 15px 3px #000000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#character1 {
+  text-align: center;
+  color: rgb(29, 16, 17);
+}
+#character2 {
+  text-align: center;
+  color: rgb(187, 187, 145);
+}
+.containerList {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: flex-end;
+  margin: 10px;
+  position: relative;
+  right: 10px;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+h3 {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+.containerPartList {
+  padding: 10px;
+  border: 3px solid rgba(227, 93, 36, 0.3);
+  background-color: rgba(255, 166, 0, 0.4);
+}
+.portrait {
+  border: 1px solid;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.choose {
+  background-color: rgba(116, 116, 255, 0.315);
+}
+.characterFinal {
+  max-width: 30%;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 205px);
+  right: 3em;
+}
+.containerCharacter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid rgba(7, 167, 92, 0.3);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: #fff;
+}
+.imgBody {
+  position: absolute;
+  z-index: 1;
+}
+.imgEyes {
+  position: absolute;
+  z-index: 2;
+}
+.imgHair {
+  position: absolute;
+  z-index: 2;
+}
+.imgMouth {
+  position: absolute;
+  z-index: 2;
+}
+.imgEyebrows {
+  position: absolute;
+  z-index: 2;
+}
+.imgHat {
+  position: absolute;
+  z-index: 3;
+}
+.imgGlasses {
+  position: absolute;
+  z-index: 3;
+}
+.imgClothing1 {
+  position: absolute;
+  z-index: 2;
+}
+.imgClothing2 {
+  position: absolute;
+  z-index: 3;
+}
+.imgClothing3 {
+  position: absolute;
+  z-index: 4;
+}
+#btn {
+  background-color: #ca5119;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 0 10px;
+  padding: 10px;
+  text-transform: uppercase;
+}
