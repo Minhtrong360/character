@@ -11,6 +11,7 @@ function Img({ item, handleClick }) {
         src={item.props.src}
         width={item.props.width}
         alt="PNG"
+        style={item.props.style}
         onClick={() => handleClick(item)}
       />
     </div>

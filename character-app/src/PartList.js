@@ -29,7 +29,7 @@ for (let i = 0; i < total.body; i++) {
       key={i + 1}
       id={i + 1}
       name="body"
-      className="portrait"
+      className="portrait "
       src={`../img/body/${i + 1}.png`}
       width="50px"
       height="60px"
@@ -153,7 +153,8 @@ for (let i = 0; i < total.clothing3; i++) {
       name="clothing3"
       className="portrait"
       src={`../img/clothes/layer_3/${i + 1}.png`}
-      width="50px"
+      width="100px"
+      style={{ top: "-15px" }}
       alt="PNG"
     />
   );
@@ -201,46 +202,84 @@ function PartList() {
   const [chooseClothing3, setChooseClothing3] = useState(
     clothing3[Math.floor(Math.random() * clothing3.length)]
   );
-
   const handleClick = (item) => {
-    // console.log(item);
-    // console.log("body", item.props["id"]);
-    // console.log(item.props["className"]);
+    const index = item.props.id;
+    const newItem = [];
+    newItem.push(
+      <img
+        key={index}
+        id={index}
+        name={item.props.name}
+        className="portrait selected"
+        src={item.props.src}
+        width={item.props.width}
+        alt="PNG"
+      />
+    );
+
     if (item.props.name === "body") {
+      const newBody = body.slice();
+      newBody[index - 1] = newItem[0];
+      setBody1(newBody);
       setChooseBody(item);
     }
     if (item.props.name === "eyes") {
+      const newEyes = eyes.slice();
+      newEyes[index - 1] = newItem[0];
+      setEyes1(newEyes);
       setChooseEyes(item);
     }
     if (item.props.name === "hair") {
+      const newHair = hair.slice();
+      newHair[index - 1] = newItem[0];
+      setHair1(newHair);
       setChooseHair(item);
     }
     if (item.props.name === "mouth") {
+      const newMouth = mouth.slice();
+      newMouth[index - 1] = newItem[0];
+      setMouth1(newMouth);
       setChooseMouth(item);
     }
     if (item.props.name === "eyebrows") {
+      const newEyebrows = eyebrows.slice();
+      newEyebrows[index - 1] = newItem[0];
+      setEyebrows1(newEyebrows);
       setChooseEyebrows(item);
     }
     if (item.props.name === "hat") {
+      const newHat = hat.slice();
+      newHat[index - 1] = newItem[0];
+      setHat1(newHat);
       setChooseHat(item);
     }
     if (item.props.name === "glasses") {
+      const newGlasses = glasses.slice();
+      newGlasses[index - 1] = newItem[0];
+      setGlasses1(newGlasses);
       setChooseGlasses(item);
     }
     if (item.props.name === "clothing1") {
+      const newClothing1 = clothing1.slice();
+      newClothing1[index - 1] = newItem[0];
+      setClothing11(newClothing1);
       setChooseClothing1(item);
     }
     if (item.props.name === "clothing2") {
+      const newClothing2 = clothing2.slice();
+      newClothing2[index - 1] = newItem[0];
+      setClothing21(newClothing2);
       setChooseClothing2(item);
     }
     if (item.props.name === "clothing3") {
+      const newClothing3 = clothing3.slice();
+      newClothing3[index - 1] = newItem[0];
+      setClothing31(newClothing3);
       setChooseClothing3(item);
     }
   };
-
   const handleRandom = () => {
     setChooseBody(body[Math.floor(Math.random() * body.length)]);
-
     setChooseEyes(eyes[Math.floor(Math.random() * eyes.length)]);
     setChooseHair(hair[Math.floor(Math.random() * hair.length)]);
     setChooseMouth(mouth[Math.floor(Math.random() * mouth.length)]);
@@ -253,200 +292,158 @@ function PartList() {
   };
 
   return (
-    <>
-      <main>
-        <div className="containerList">
-          <div className="list">
-            <h3>Body</h3>
-            <div className="containerPartList ">
-              {body1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Eyes</h3>
-            <div className="containerPartList">
-              {eyes1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Hair</h3>
-            <div className="containerPartList">
-              {hair1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Mouth</h3>
-            <div className="containerPartList">
-              {mouth1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Eyebrows</h3>
-            <div className="containerPartList">
-              {eyebrows1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Hats</h3>
-            <div className="containerPartList">
-              {hat1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Glasses</h3>
-            <div className="containerPartList">
-              {glasses1.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Clothing(L1)</h3>
-            <div className="containerPartList">
-              {clothing11.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Clothing(L2)</h3>
-            <div className="containerPartList">
-              {clothing21.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="list">
-            <h3>Clothing(L3)</h3>
-            <div className="containerPartList">
-              {clothing31.map((item) => (
-                <Img
-                  key={item.props.id}
-                  item={item}
-                  handleClick={handleClick}
-                />
-              ))}
-            </div>
+    <main>
+      <div className="containerList">
+        <div className="list">
+          <h2>Body</h2>
+          <div className="containerPartList ">
+            {body1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
           </div>
         </div>
-        <div className="characterFinal">
-          <h2>Character</h2>
-          <div className="containerCharacter">
-            <img
-              className="imgBody"
-              src={chooseBody.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgEyes"
-              src={chooseEyes.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgHair"
-              src={chooseHair.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgMouth"
-              src={chooseMouth.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgEyebrows"
-              src={chooseEyebrows.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgHat"
-              src={chooseHat.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgGlasses"
-              src={chooseGlasses.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgClothing1"
-              src={chooseClothing1.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgClothing2"
-              src={chooseClothing2.props["src"]}
-              alt=""
-              width="150px"
-            />
-            <img
-              className="imgClothing3"
-              src={chooseClothing3.props["src"]}
-              alt=""
-              width="150px"
-            />
+        <div className="list">
+          <h2>Eyes</h2>
+          <div className="containerPartList">
+            {eyes1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
           </div>
-          <button id="btn" onClick={() => handleRandom()}>
-            RANDOMIZE!
-          </button>
         </div>
-      </main>
-    </>
+        <div className="list">
+          <h2>Hair</h2>
+          <div className="containerPartList">
+            {hair1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Mouth</h2>
+          <div className="containerPartList">
+            {mouth1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Eyebrows</h2>
+          <div className="containerPartList">
+            {eyebrows1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Hats</h2>
+          <div className="containerPartList">
+            {hat1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Glasses</h2>
+          <div className="containerPartList">
+            {glasses1.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Clothing(L1)</h2>
+          <div className="containerPartList">
+            {clothing11.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Clothing(L2)</h2>
+          <div className="containerPartList">
+            {clothing21.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+        <div className="list">
+          <h2>Clothing(L3)</h2>
+          <div className="containerPartList">
+            {clothing31.map((item) => (
+              <Img key={item.props.id} item={item} handleClick={handleClick} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="characterFinal">
+        <h2>Character</h2>
+        <div className="containerCharacter">
+          <img
+            className="imgBody"
+            src={chooseBody.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgEyes"
+            src={chooseEyes.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgHair"
+            src={chooseHair.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgMouth"
+            src={chooseMouth.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgEyebrows"
+            src={chooseEyebrows.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgHat"
+            src={chooseHat.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgGlasses"
+            src={chooseGlasses.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgClothing1"
+            src={chooseClothing1.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgClothing2"
+            src={chooseClothing2.props["src"]}
+            alt=""
+            width="150px"
+          />
+          <img
+            className="imgClothing3"
+            src={chooseClothing3.props["src"]}
+            alt=""
+            width="150px"
+          />
+        </div>
+        <button id="btn" onClick={() => handleRandom()}>
+          RANDOMIZE!
+        </button>
+      </div>
+    </main>
   );
 }
 
