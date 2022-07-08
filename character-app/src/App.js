@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import PartList from "./PartList";
+import Header from "./Components/Header";
+import PartList from "./Components/PartList";
 
 import "./App.css";
 
