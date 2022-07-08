@@ -279,6 +279,16 @@ function PartList() {
     }
   };
   const handleRandom = () => {
+    setBody1(body);
+    setEyes1(eyes);
+    setEyebrows1(eyebrows);
+    setHair1(hair);
+    setMouth1(mouth);
+    setHat1(hat);
+    setGlasses1(glasses);
+    setClothing11(clothing1);
+    setClothing21(clothing2);
+    setClothing31(clothing3);
     setChooseBody(body[Math.floor(Math.random() * body.length)]);
     setChooseEyes(eyes[Math.floor(Math.random() * eyes.length)]);
     setChooseHair(hair[Math.floor(Math.random() * hair.length)]);

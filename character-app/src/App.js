@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Components/Header";
-import PartList from "./Components/PartList";
-// import Character from "./Character";
+import Header from "./Header";
+import PartList from "./PartList";
+
 import "./App.css";
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
     <div className="container">
       <Header />
       <PartList />
-      {/* <Character /> */}
     </div>
   );
 }
